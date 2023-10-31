@@ -55,3 +55,39 @@ body {
     width: 470px;
     height: 440px;  
 }
+
+.h4{
+  color: #25055D;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container {
+  justify-content: space-between;
+}
+
+.image-container{
+    flex: 0 0 auto;
+    margin-right: 20px; 
+}
+
+.text-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Additional styles for the text and button container */
+}
+
+.upcomingevet{
+  display: flex;
+  padding: 28px 84px;
+  justify-content: center;
+  align-items: center;
+  gap: 142px;
+  border-radius: 20px;
+  background: #FFF;
+}

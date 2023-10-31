@@ -2,14 +2,15 @@
     .discoverDS {
         align-items: flex-end;
         gap: 32 px;
+        padding: 20px;
     }
+
     .dropdown {
         display: flex;
-        width: 470 px;
-        padding: 24px 0px 24px 24px;
-        align-items: center;
         gap: 38px;
         color: #25055D;
+        color: black;
+        !important;
     }
 
     .disneyinfo {
@@ -31,17 +32,18 @@ Disneyland Reviews
     font-size: 48px;
     font-style: bold;
     font-weight: 700;
-    line-height: normal;
-    padding">
-        Places</p>
+    line-height: normal;">
+        Places
+    </p>
     <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-            style="border-radius: 10px; width: 470px;
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 10 px; width: 470px; text-align: left; display: flex; justify-content: space-between;
         border: 0.5px solid #290568;
         background: #EAE6F1;">
             Dropdown button
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="border-radius: 10 px; width: 470px;
+        border: 0.5px solid #290568;
+        background: #EAE6F1;">
             <li><a class="dropdown-item" href="#">Disneyland Hongkok</a></li>
             <li><a class="dropdown-item" href="#">Disneyland Paris</a></li>
             <li><a class="dropdown-item" href="#">Disneyland California</a></li>
@@ -67,6 +69,66 @@ Disneyland Reviews
             <img src="{% static 'disney.jpeg' %}" class="App-logo" alt="logo"
                 style=" width: 589px; height: 479px; border-radius: 20px;" ; />
         </div>
+    </div>
+</div>
+<div>
+    <p style="color: #290568;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: normal;">
+        Disneyland Hongkong
+    </p>
+    <div class="piechart">
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <div id="pie-chart"></div>
+
+        <script>
+            const data = [
+                { label: 'Positive', value: 50 },
+                { label: 'Negative', value: 30 },
+                { label: 'Neutral', value: 20 },
+                { label: 'Very Positive', value: 40 },
+                { label: 'Very Negative', value: 10 },
+            ];
+
+            const width = 400; // Width of the SVG container
+            const height = 400; // Height of the SVG container
+            const radius = Math.min(width, height) / 2; // Radius of the pie chart
+
+            const color = d3.scaleOrdinal()
+                .domain(data.map(d => d.label))
+                .range(['#BCC9CC', '#D2D6D0', '#290568', '#0F0595', '#283AAC']);
+
+            const svg = d3.select('#pie-chart')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height)
+                .append('g')
+                .attr('transform', `translate(${width / 2},${height / 2})`);
+
+            const pie = d3.pie()
+                .value(d => d.value);
+
+            const data_ready = pie(data);
+
+            const arc = d3.arc()
+                .innerRadius(0)
+                .outerRadius(radius);
+
+            svg.selectAll('path')
+                .data(data_ready)
+                .enter()
+                .append('path')
+                .attr('d', arc)
+                .attr('fill', (d, i) => color(i));
+
+            // No legend is created, and labels inside the pie chart are removed.
+        </script>
+    </div>
+    <div class="" showcomment>
+
     </div>
 </div>
 {% endblock %}
