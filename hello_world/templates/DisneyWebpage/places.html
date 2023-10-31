@@ -1,7 +1,61 @@
+<style>
+    .discoverDS {
+        align-items: flex-end;
+        gap: 32 px;
+        background-color: aqua;
+    }
+    .dropdown {
+        display: flex;
+        width: 470 px;
+        padding: 24px 0px 24px 24px;
+        align-items: center;
+        gap: 38px;
+        color: #25055D;
+    }
+</style>
 {% extends 'DisneyWebpage/layout.html' %}
+{% load static %}
+{% block title %}
+Disneyland Reviews
+{% endblock %}
 
+{% block content %}
 <div class="discoverDS">
-    <p></p>Places</p>
+    <p style="color: #290568;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: normal;;">
+    Places</p>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" 
+            data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 10px;
+        border: 0.5px solid #290568;
+        background: #EAE6F1;">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Disneyland Hongkok</a></li>
+            <li><a class="dropdown-item" href="#">Disneyland Paris</a></li>
+            <li><a class="dropdown-item" href="#">Disneyland California</a></li>
+        </ul>
+    </div>
+    <div class="disneyinfo">
 
+    
+    <img src="{% static 'disney.jpeg' %}" class="App-logo" alt="logo" style=" width: 589px; height: 479px; border-radius: 20px;" ; />
+    </div>
 </div>
 
+
+
+
+<div class="upcomingevet">
+    <div class="card">
+
+    </div>
+</div>
+
+
+{% endblock %}
