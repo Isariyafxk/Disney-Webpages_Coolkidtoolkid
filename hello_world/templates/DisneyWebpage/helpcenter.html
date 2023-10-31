@@ -1,1 +1,151 @@
 {% extends 'DisneyWebpage/layout.html' %}
+{% load static %}
+<style>
+    .discoverDS {
+        display: flex;
+        align-items: flex-end;
+        gap: 32 px;
+        background-color: aqua;
+    }
+</style>
+
+
+
+{% block title %}
+Disneyland Reviews
+{% endblock %}
+
+{% block content %}
+<!--HelpCenter & FAQs-->
+<div
+    style="width: 100%; height: 100%; padding-left: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex margin-top: 38px; margin-bottom: 38px;">
+    <div style="color: #25055D; font-size: 40px; font-family: Inter; font-weight: 700; word-wrap: break-word">Help
+        center</div>
+</div>
+<div
+    style="width: 100%; height: 100%; padding: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex margin-top: 38px; margin-bottom: 38px;">
+    <div style="color: #25055D; font-size: 40px; font-family: Inter; font-weight: 700; word-wrap: break-word">FAQS</div>
+</div>
+<!--Question panel-->
+<div>
+
+    <div
+        style="width: 100%; height: 100%; padding: 13px 88px 13px 88px; background: #020079; border-radius: 20px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex; margin-bottom: 16px;">
+        <div style="padding: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex;">
+            <div style="color: #E0DAEA; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word;">
+                Question 1</div>
+        </div>
+        <div
+            style="padding: 20px 10px 10px 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex;">
+            <div><span
+                    style="color: #E0DAEA; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word;">Ans:
+                </span><span
+                    style="color: #E0DAEA; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word;">Lorem
+                    ipsum dolor sit amet</span></div>
+        </div>
+    </div>
+    <div
+        style="width: 100%; height: 100%; padding: 13px 88px 13px 88px; background: #020079; border-radius: 20px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex; margin-bottom: 16px;">
+        <div style="padding: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex;">
+            <div style="color: #E0DAEA; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word;">
+                Question 2</div>
+        </div>
+        <div
+            style="padding: 20px 10px 10px 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex;">
+            <div><span
+                    style="color: #E0DAEA; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word;">Ans:
+                </span><span
+                    style="color: #E0DAEA; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word;">Lorem
+                    ipsum dolor sit amet</span></div>
+        </div>
+    </div>
+    <div
+        style="width: 100%; height: 100%; padding: 13px 88px 13px 88px; background: #020079; border-radius: 20px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex; margin-bottom: 16px">
+        <div style="padding: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex;">
+            <div style="color: #E0DAEA; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word;">
+                Question 3</div>
+        </div>
+        <div
+            style="padding: 20px 10px 10px 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex;">
+            <div><span
+                    style="color: #E0DAEA; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word;">Ans:
+                </span><span
+                    style="color: #E0DAEA; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word;">Lorem
+                    ipsum dolor sit amet</span></div>
+        </div>
+    </div>
+    <div
+        style="width: 100%; height: 100%; padding: 13px 88px 13px 88px; background: #020079; border-radius: 20px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex;">
+        <div style="padding: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex;">
+            <div style="color: #E0DAEA; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word;">
+                Question 4</div>
+        </div>
+        <div
+            style="padding: 20px 10px 10px 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex;">
+            <div><span
+                    style="color: #E0DAEA; font-size: 32px; font-family: Inter; font-weight: 400; word-wrap: break-word;">Ans:
+                </span><span
+                    style="color: #E0DAEA; font-size: 24px; font-family: Inter; font-weight: 400; word-wrap: break-word;">Lorem
+                    ipsum dolor sit amet</span></div>
+        </div>
+    </div>
+</div>
+<!--Report text-->
+<div
+    style="width: 100%; height: 100%; padding: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex margin-top: 38px;">
+    <div style="color: #290568; font-size: 48px; font-family: Inter; font-weight: 700; word-wrap: break-word">Report
+        Issuses</div>
+</div>
+<!--Dropdown box-->
+<label>
+    <select
+        style="width: 50%; height: 50%; padding-top: 10px; padding-bottom: 10px; padding-left: 24px; background: #EAE6F1; border-radius: 10px; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex"
+        id="rating" name="rating">
+        <option value="" disabled selected>Rating</option>
+        <option value="option1">⭐️⭐️⭐️⭐️⭐️</option>
+        <option value="option2">⭐️⭐️⭐️⭐️</option>
+        <option value="option3">⭐️⭐️⭐️</option>
+        <option value="option4">⭐️⭐️</option>
+        <option value="option5">⭐️</option>
+    </select>
+
+    <select
+        style="width: 50%; height: 50%; padding-top: 10px; padding-bottom: 10px; padding-left: 24px; background: #EAE6F1; border-radius: 10px; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex"
+        id="rating" name="rating" id="disneyland" name="disneyland">
+        <option value="" disabled selected>Disneyland Location</option>
+        <option value="option1">Hongkong</option>
+        <option value="option2">Paris</option>
+        <option value="option3">California</option>
+    </select>
+    <select
+        style="width: 50%; height: 50%; padding-top: 10px; padding-bottom: 10px; padding-left: 24px; background: #EAE6F1; border-radius: 10px; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex"
+        id="rating" name="rating" id="reviewer_location" name="reviewer_location">
+        <option value="" disabled selected>Reviewer's Location</option>
+        <option value="option1">Afghanistan</option>
+        <option value="option2">Albania</option>
+        <option value="option3">Algeria</option>
+        <option value="option4">Andorra</option>
+        <option value="option5">Antigua & Deps</option>
+        <option value="option6">Argentina</option>
+        <option value="option7">Bahrain</option>
+        <option value="option8">Bangladesh</option>
+        <option value="option9">Barbados</option>
+    </select>
+</label>
+<!--Add comment-->
+<div
+    style="width: 100%; height: 100%; padding: 10px; justify-content: center; align-items: center; gap: 10px; display: inline-flex margin-top: 33px margin-bottom: 10px">
+    <div style="color: #290568; font-size: 32px; font-family: Inter; font-weight: 700; word-wrap: break-word">Add
+        comment</div>
+</div>
+<!--Comment-->
+<form>
+    <textarea
+        style="width: 50%; height: 50%; padding-top: 10px; padding-bottom: 32px; padding-left: 10px; padding-right: 274px; background: #EAE6F1; border-radius: 20px; justify-content: center; align-items: center; gap: 10px; display: inline-flexid="
+        comment" name="comment" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
+    <br>
+    <input
+        style="width: 10%; height: 10%; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #290568 solid; justify-content: center; align-items: center; gap: 45px; display: inline-flex margin-top: 32px;"
+        ;" type="submit" value="Submit">
+</form>
+{% endblock %}
