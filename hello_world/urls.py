@@ -24,7 +24,10 @@ urlpatterns = [
     path("", core_views.index),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
-    path("disneyreviews", core_views.disney_webpage)
+    path("disneyreviews", core_views.disney_webpage),
+    path("places", core_views.places),
+    path("helpcenter", core_views.helpcenter),
+    path("aboutus", core_views.aboutus),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
