@@ -52,6 +52,14 @@
         background: #EAE6F1;
         margin-bottom: 32px;
     }
+    .addcomment{
+        width: 75%;
+        margin-top: 10px;
+        background: #EAE6F1;
+        border: 1px solid #ccc;
+        padding: 10px;
+        resize: none;
+    }
 
     #pie-chart {
         display: flex;
@@ -151,7 +159,6 @@ Disneyland Reviews
                     .value(d => d.value);
 
                 const data_ready = pie(data);
-
                 const arc = d3.arc()
                     .innerRadius(0)
                     .outerRadius(radius);
@@ -232,7 +239,7 @@ Disneyland Reviews
 </div>
 </div>
 <div class="review-container">
-    <h2 class="review-title">Write Your Review</h2>
+    <h2 class="headtitle">Write Your Review</h2>
     <div class="rating" id="star-rating">
         <!-- 5-star rating icons -->
         <span class="star" data-rating="1">&#9733;</span>
@@ -241,7 +248,7 @@ Disneyland Reviews
         <span class="star" data-rating="4">&#9733;</span>
         <span class="star" data-rating="5">&#9733;</span>
     </div>
-    <textarea class="comment" placeholder="Write your comment here..."></textarea>
+    <textarea class="addcomment" placeholder="Write your comment here..."></textarea>
 </div>
 
 <script>
