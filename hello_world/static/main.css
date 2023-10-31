@@ -166,3 +166,20 @@ height: 669px;
   align-items: flex-end;
 }
 
+.information{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 46px;
+}
+
+.frame{
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+
+.pic{
+  width: 600px;
+  height: 600px;
+}

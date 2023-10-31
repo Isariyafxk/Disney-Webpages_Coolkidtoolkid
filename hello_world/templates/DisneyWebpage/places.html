@@ -79,9 +79,10 @@
     }
 
     #pic {
-        width: 200px;
-        height: 200px;
+        width: 2px;
+        height: 2px;
         border-radius: 50%;
+        object-fit: scale-down;
         overflow: hidden;
         background-color: darkgoldenrod;
     }
@@ -233,7 +234,7 @@ Disneyland Reviews
             </div>
             <div class="comment">
                 <div class="pic">
-                    <p>picture should be here</p>
+                    <img src="{% static 'Mond.jpg' %}"/>
                 </div>
                 <div class="eachcomment">
                     <p>⭐️⭐️⭐️⭐️</p>
@@ -241,18 +242,23 @@ Disneyland Reviews
                 </div>
             </div>
             <div class="comment">
+                <div class="pic">
+                    <p>picture should be here</p>
+                </div>
                 <div class="eachcomment">
                     <p>⭐️⭐️⭐️</p>
                     <p>*comment*</p>
                 </div>
             </div>
             <div class="comment">
+                <div class="pic">
+                    <p>picture should be here</p>
+                </div>
                 <div class="eachcomment">
                     <p>⭐️⭐️⭐️</p>
                     <p>*comment*</p>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -285,9 +291,7 @@ Disneyland Reviews
                 }
             });
         });
-
         commentTextarea.addEventListener('input', (event) => {
-
         });
     </script>
 </div>
