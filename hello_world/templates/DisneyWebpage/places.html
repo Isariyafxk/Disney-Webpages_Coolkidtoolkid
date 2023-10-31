@@ -18,6 +18,20 @@
         align-items: center;
         gap: 20px;
     }
+
+    .headtitle {
+        color: #290568;
+        font-family: Inter;
+        font-size: 48px;
+        font-style: bold;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom:  50px;
+    }
+    .showcomment{
+        background-color: #25055D;
+        
+    }
 </style>
 {% extends 'DisneyWebpage/layout.html' %}
 {% load static %}
@@ -27,12 +41,7 @@ Disneyland Reviews
 
 {% block content %}
 <div class="discoverDS">
-    <p style="color: #290568;
-    font-family: Inter;
-    font-size: 48px;
-    font-style: bold;
-    font-weight: 700;
-    line-height: normal;">
+    <p class="headtitle">
         Places
     </p>
     <div class="dropdown">
@@ -71,14 +80,10 @@ Disneyland Reviews
         </div>
     </div>
 </div>
-<div>
-    <p style="color: #290568;
-    font-family: Inter;
-    font-size: 48px;
-    font-style: bold;
-    font-weight: 700;
-    line-height: normal;">
-        Disneyland Hongkong
+<div style="display: grid; 
+grid-template-columns: 50% 50%;	">
+    <p class="headtitle">
+    Disneyland Hongkong
     </p>
     <div class="piechart">
         <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -127,8 +132,21 @@ Disneyland Reviews
             // No legend is created, and labels inside the pie chart are removed.
         </script>
     </div>
-    <div class="" showcomment>
-
+    <div class="showcomment">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 10 px; width: 470px; text-align: left; display: flex; justify-content: space-between;
+            border: 0.5px solid #290568;
+            background: #EAE6F1;">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="border-radius: 10 px; width: 470px;
+            border: 0.5px solid #290568;
+            background: #EAE6F1;">
+                <li><a class="dropdown-item" href="#">Disneyland Hongkok</a></li>
+                <li><a class="dropdown-item" href="#">Disneyland Paris</a></li>
+                <li><a class="dropdown-item" href="#">Disneyland California</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -64,6 +64,12 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    background: #FFF;
+    display: flex;
+  padding: 28px 84px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .container {
@@ -85,9 +91,23 @@ body {
 .upcomingevet{
   display: flex;
   padding: 28px 84px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 142px;
   border-radius: 20px;
-  background: #FFF;
+}
+
+.bigcomingevet{
+  display: flex;
+  padding: 53px 35px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  display: flex;
+  padding: 53px 35px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  background: #25055D;
 }
