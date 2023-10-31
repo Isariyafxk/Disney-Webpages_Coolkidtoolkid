@@ -1,4 +1,5 @@
 {% extends 'DisneyWebpage/layout.html' %}
+
 <style>
     .discoverDS {
         display: flex;
@@ -6,7 +7,27 @@
         gap: 32 px;
         background-color: aqua;
     }
+
+    .pic1 {
+        width: 470px;
+        height: 440px;
+    }
+
+    .button1 {
+        border-radius: 10px;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 24px;
+        
+    }
+    .card button{
+        background-color: #290568;
+    }
 </style>
+
+
+
+
 {% load static %}
 {% block title %}
 Disneyland Reviews
@@ -19,16 +40,24 @@ Disneyland Reviews
 </div>
 
 
-
+<link rel="stylesheet" href="{% static 'main.css' %}">
 
 <div class="upcomingevet">
-    <p>Upcoming Events</p>
+    <p style="font-size: 48px; color: #290568;">Upcoming Events</p>
     <div class="card">
-        <img src="halloween.png" class="App-logo" alt="halloween">
+        <img src="{% static 'halloween.jpeg' %}" class="pic1" alt="halloween">
         <div>
-            <h4>Halloween 2023</h4> 
-            <h4>at Disneyland PARIS!</h4>
-            <button>Ticket</button>
+            <h4>Halloween 2023</h4>
+            <h4>at Disneyland Tokyo!</h4>
+            <button class="button">Ticket</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'halloweenParis.webp' %}" class="pic1" alt="halloween">
+        <div>
+            <h4>Halloween 2023</h4>
+            <h4 class="text">at Disneyland PARIS!</h4>
+            <button class="button" >Ticket</button>
         </div>
     </div>
 </div>

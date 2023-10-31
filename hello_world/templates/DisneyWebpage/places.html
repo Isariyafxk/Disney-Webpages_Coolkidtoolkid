@@ -2,7 +2,6 @@
     .discoverDS {
         align-items: flex-end;
         gap: 32 px;
-        background-color: aqua;
     }
     .dropdown {
         display: flex;
@@ -11,6 +10,12 @@
         align-items: center;
         gap: 38px;
         color: #25055D;
+    }
+
+    .disneyinfo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
 </style>
 {% extends 'DisneyWebpage/layout.html' %}
@@ -26,11 +31,12 @@ Disneyland Reviews
     font-size: 48px;
     font-style: bold;
     font-weight: 700;
-    line-height: normal;;">
-    Places</p>
+    line-height: normal;
+    padding">
+        Places</p>
     <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" 
-            data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 10px;
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+            style="border-radius: 10px; width: 470px;
         border: 0.5px solid #290568;
         background: #EAE6F1;">
             Dropdown button
@@ -42,17 +48,25 @@ Disneyland Reviews
         </ul>
     </div>
     <div class="disneyinfo">
-
-    
-    <img src="{% static 'disney.jpeg' %}" class="App-logo" alt="logo" style=" width: 589px; height: 479px; border-radius: 20px;" ; />
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 72px;">
+            <img src="{% static '440px-Disneyland_Park_Logo.svg.png' %}" class="App-logo" alt="logo"
+                style=" width: 440px; height: 121px; margin: 0 auto;" ; />
+            <p style="color: #2E0674;
+            text-align: center;
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;">
+                Disneyland is a theme park in Anaheim, California. Opened in 1955, it was the first theme park opened by
+                The Walt Disney Company and the only one designed and constructed under the direct supervision of Walt
+                Disney
+            </p>
+        </div>
+        <div>
+            <img src="{% static 'disney.jpeg' %}" class="App-logo" alt="logo"
+                style=" width: 589px; height: 479px; border-radius: 20px;" ; />
+        </div>
     </div>
 </div>
-
-
-<div class="upcomingevet">
-    <div class="card">
-
-    </div>
-</div>
-
 {% endblock %}

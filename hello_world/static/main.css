@@ -43,3 +43,15 @@ body {
   .small {
     font-size: 0.75rem;
   }
+
+  .button {
+    border-radius: 10px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    background: #290568;
+}
+.pic1{
+    width: 470px;
+    height: 440px;  
+}
