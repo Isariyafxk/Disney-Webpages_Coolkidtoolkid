@@ -1,3 +1,4 @@
+{% extends 'DisneyWebpage/layout.html' %}
 <style>
     .discoverDS {
         display: flex;
@@ -6,9 +7,7 @@
         background-color: aqua;
     }
 </style>
-
-{% extends 'DisneyWebpage/layout.html' %}
-
+{% load static %}
 {% block title %}
 Disneyland Reviews
 {% endblock %}
@@ -16,6 +15,6 @@ Disneyland Reviews
 {% block content %}
 <div class="discoverDS">
     <p></p>Discover your Disneyland! </p>
-    <img src=""/>
+    <img src="{% static 'disney.jpeg' %}" class="App-logo" alt="logo" />
 </div>
 {% endblock %}
