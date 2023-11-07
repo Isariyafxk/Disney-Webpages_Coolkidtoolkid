@@ -21,3 +21,6 @@ def helpcenter(request):
 def aboutus(request):
     context = {}
     return render(request, "DisneyWebpage/aboutus.html", context=context)
+def aboutus(request):
+    context = {}
+    return render(request, "DisneyWebpage/login.html", context=context)
