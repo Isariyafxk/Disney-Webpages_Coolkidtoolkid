@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from models import views
 
 from hello_world.core import views as core_views
 
@@ -29,7 +30,8 @@ urlpatterns = [
     path("helpcenter", core_views.helpcenter),
     path("aboutus", core_views.aboutus),
     path("login", core_views.login),
-    path("import",core_views.import_data_csv)
+    path("import/csv", views.import_data_csv),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
