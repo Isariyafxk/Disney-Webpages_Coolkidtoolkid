@@ -1,0 +1,175 @@
+
+<style>
+    .pic {
+        width: 588px;
+        height: 1024px;
+    }
+
+    .Heading {
+        color: #2E0674;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .text1 {
+        color: #2E0674;
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .inputtext {
+        display: flex;
+        width: 348px;
+        padding: 10px 191px 10px 41px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 20px;
+        border: 1px solid #2E0674;
+    }
+
+    .inputlongtext {
+        display: flex;
+        padding: 10px 191px 10px 41px;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 20px;
+        border: 1px solid #2E0674;
+    }
+
+    .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .Box2 {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .linebutton {
+        border-radius: 20px;
+        border: 2px solid #2E0674;
+        background: #FFF;
+        display: flex;
+        width: 348px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: -35px;
+
+    }
+
+    .filledbutton {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: -35px;
+        flex: 1 0 0;
+        border-radius: 20px;
+        border: 1px solid #2E0674;
+        background: #2E0674;
+
+    }
+
+    .buttonlayout {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        align-self: stretch;
+    }
+
+    .Filled {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 59px;
+    }
+
+    .regis {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 68px;
+    }
+
+    .fullform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 75px;
+    }
+
+    .form {
+        display: flex;
+        align-items: center;
+        gap: 66px;
+    }
+</style>
+
+{% extends 'DisneyWebpage/layout.html' %}
+{% load static %}
+{% block title %}
+Disneyland Reviews
+{% endblock %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Registration Page</title>
+</head>
+
+<body>
+    <div class="form">
+        <img src="Disney1.png" alt="disney1">
+        <div class="fullform">
+            <div class="regis">
+                <h1 class="Heading">Register</h1>
+                <div class="Filled">
+                    <div class="Box2">
+                        <div class="box1">
+                            <label class="text1">User name</label><br>
+                            <input class="inputtext" type="text" id="Uname" name="Uname"><br><br>
+                        </div>
+                        <div class="box1">
+                            <label class="text1">Name</label><br>
+                            <input class="inputtext" type="text" id="name" name="name"><br><br>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text1">User name</label><br>
+                        <input class="inputlongtext" type="text" id="Uname" name="Uname"><br><br>
+                    </div>
+
+                    <div class="Box2">
+                        <div class="box1">
+                            <label class="text1">Password</label><br>
+                            <input class="inputtext" type="text" id="Password" name="Password"><br><br>
+                        </div>
+                        <div class="box1">
+                            <label class="text1">Confirm Password</label><br>
+                            <input class="inputtext" type="text" id="Cpass" name="Cpass"><br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonlayout">
+                    <button class="linebutton">Cancel</button>
+                    <button class="filledbutton">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

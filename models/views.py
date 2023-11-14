@@ -1,33 +1,9 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 import pandas as pd
+from .models import *
 
-
-def index(request):
-    context = {
-        "title": "Django example",
-    }
-    return render(request, "index.html", context)
-
-def disney_webpage(request):
-    context = {}
-    return render(request, "DisneyWebpage/home.html", context=context)
-
-def places(request):
-    context = {}
-    return render(request, "DisneyWebpage/places.html", context=context)
-
-def helpcenter(request):
-    context = {}
-    return render(request, "DisneyWebpage/helpcenter.html", context=context)
-
-def aboutus(request):
-    context = {}
-    return render(request, "DisneyWebpage/aboutus.html", context=context)
-def login(request):
-    context = {}
-    return render(request, "DisneyWebpage/login.html", context=context)
-
+# Create your views here.
 def import_data_csv(request):
     csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR2ZacBZdkvDSD-JXC4Cj4ExDPmwx7BuYk8lo3W8aFNfWLfa2W1k2EvdJhf6a3LJpTMcyophf9Y4KUi/pub?output=csv'
     df = pd.read_csv(csv_url)
@@ -47,4 +23,4 @@ def import_data_csv(request):
             sucesss.append(index)
         except:
             errors.append(index)
-    return JsonResponse({"success_indexs":sucesss,"error_indexs":errors})
+    return JsonResponse({" Hi "})
