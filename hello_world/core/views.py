@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 import pandas as pd
+from models.models import DisneylandReview
 
 
 def index(request):

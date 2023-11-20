@@ -3,7 +3,6 @@ from django.http import JsonResponse
 import pandas as pd
 from .models import *
 
-# Create your views here.
 def import_data_csv(request):
     csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR2ZacBZdkvDSD-JXC4Cj4ExDPmwx7BuYk8lo3W8aFNfWLfa2W1k2EvdJhf6a3LJpTMcyophf9Y4KUi/pub?output=csv'
     df = pd.read_csv(csv_url)
@@ -12,8 +11,8 @@ def import_data_csv(request):
     errors = []
     for index, row in data_sets.iterrows():
         instance = DisneylandReview(
-            Review_ID = row['Review_ID'],
-            Rating = row['Rating'],
+            Review_ID = int(row['Review_ID']),
+            Rating = int(row['Rating']),
             Year = row['Year_Month'],
             Text = row['Review_Text'],
             Branch = row['Branch'],
@@ -23,4 +22,4 @@ def import_data_csv(request):
             sucesss.append(index)
         except:
             errors.append(index)
-    return JsonResponse({" Hi "})
+    return JsonResponse({"success_indexes":sucesss,"error_index":errors})

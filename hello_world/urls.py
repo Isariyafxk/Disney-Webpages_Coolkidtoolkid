@@ -30,7 +30,7 @@ urlpatterns = [
     path("helpcenter", core_views.helpcenter),
     path("aboutus", core_views.aboutus),
     path("login", core_views.login),
-    path("import/csv", views.import_data_csv),
+    path("import/csv", include('models.urls')),
 
 ]
 if settings.DEBUG:
